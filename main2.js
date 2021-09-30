@@ -4,7 +4,6 @@ const IMG_URL = 'https://image.tmdb.org/t/p/original';
 const ids = ['9007', '770635', '4347', '767', '672', '674', '12445', '671', '675', '673', '12444']
 
 //коды для жанров
-
 const genres = { 
     'Action': 28,
     'Adventure': 12,
@@ -32,7 +31,7 @@ const form = document.querySelector('.form'),
     genreSelect = document.getElementById('genre'),
     yearSelect = document.getElementById('year'),
     durationSelect = document.getElementById('duration'),
-    countrySelect = document.getElementById('country'),
+    regionSelect = document.getElementById('country'),
     ratingSelect = document.getElementById('rating'),
     modal = document.querySelector('.modal'),
     message = document.querySelector('.message'),
@@ -48,11 +47,29 @@ const form = document.querySelector('.form'),
     descriptionM = document.querySelector('.description'),
     releaseM = document.querySelector('.release-date');
 
+
+
 let n = 0;
 
+form.addEventListener('submit', event => {
+    event.preventDefault();
+
+    let selects = {
+        "region": regionSelect,
+        "with_genres": genreSelect,
+        "vote_count.gte": ratingSelect,
+        "with_runtime.lte": durationSelect,
+        "release_date.gte": yearSelect
+    }
+
+    //запрос
+    sendRequest(createRequest(getSelected(selects)))
+
+})
+
 //функция запроса
-function sendRequest(url, region, genre, rating, duration, year) {
-    fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&language=ru-RU&region=${region}&with_genres=${genre}&vote_count.gte=${rating}&with_runtime.lte=${duration}&release_date.gte=${year}`)
+function sendRequest(url) {
+    fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&language=ru-RU${url}`)
     .then((response) => {
         return response.json();
     })
@@ -74,30 +91,44 @@ function sendRequest(url, region, genre, rating, duration, year) {
             }      
         }
     });
-
 }
 
-form.addEventListener('submit', event => {
-    event.preventDefault();
-    const genreInput = genreSelect.options[genreSelect.selectedIndex].text;
-    const genre = genres[genreInput];
-    const year = yearSelect.options[yearSelect.selectedIndex].text;
-    const region = countrySelect.options[countrySelect.selectedIndex].text;
-    const duration = durationSelect.options[durationSelect.selectedIndex].text;
-    const rating = ratingSelect.options[ratingSelect.selectedIndex].text;
+//работаем с select 
+function getSelected(selects) {
+    for (key in selects) {
+        let selectedElement = selects[key];
+        if(selectedElement.selectedIndex > 0) {
+            let selectedValue = selectedElement.options[selectedElement.selectedIndex].text;
+            if(key === "with_genres") {
+                selectedValue = genres[selectedValue];
+            }
+            selects[key] = selectedValue;
+        }
+        else{
+            selectedValue = null;
+            selects[key] = selectedValue;
+        }
+    }
+    return selects;
+}
 
-    //запрос
-    sendRequest(`https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&language=ru-RU&region=${region}&with_genres=${genre}&vote_count.gte=${rating}&with_runtime.lte=${duration}&release_date.gte=${year}`, region, genre, rating, duration, year);
-
-})
-
-
+//create request
+function createRequest(selects) {
+    let url = '';
+    for(key in selects) {
+        let selectedValue = selects[key];
+        if (selectedValue) {
+            url = url + `$${key}=${selectedValue}`
+        }
+    }
+    return url;
+}
 
 //random elem from array
 function randomMovie(responseContent) {
     const moviesList = responseContent.results;
-    // const movie = moviesList[Math.ceil(Math.random()*moviesList.length)];
-    movie = moviesList[n];
+    const movie = moviesList[Math.ceil(Math.random()*moviesList.length)];
+    // movie = moviesList[n];
     createModal(movie);
 }
 
