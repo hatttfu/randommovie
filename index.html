@@ -12,127 +12,137 @@
 <body class="bg-dark text-light">
     <main class="mt-5">
         <div class="container px-5">
-            <div class="mx-auto" style="max-width: 700px; min-height: 500px">
-                <div class="mx-auto h4">
-                    <form action="" class="form mx-auto pt-5 ">
-                        <div class="row pb-5">
-                            <div class="col-sm">
-                                <label for="genre">Жанр:</label>
+            <!-- <div class="block"> -->
+                <div class="mx-auto" style="max-width: 700px; min-height: 500px">
+                    <div class="mx-auto h4">
+                        <form action="" class="form mx-auto pt-5 ">
+                            <div class="row pb-5">
+                                <div class="col-sm">
+                                    <label for="genre">Жанр:</label>
+                                </div>
+                                <div class="col-sm">
+                                    <select id="genre" class="px-2" style="width: 100%" name="genre" id="">
+                                        <option value="" class="bg-dark">Без разницы</option>
+                                        <option value="" class="bg-dark">Action</option>
+                                        <option value="" class="bg-dark">Adventure</option>
+                                        <option value="" class="bg-dark">Animation</option>
+                                        <option value="" class="bg-dark">Crime</option>
+                                        <option value="" class="bg-dark">Documentary</option>
+                                        <option value="" class="bg-dark">Family</option>
+                                        <option value="" class="bg-dark">Fantasy</option>
+                                        <option value="" class="bg-dark">History</option>
+                                        <option value="" class="bg-dark">Horror</option>
+                                        <option value="" class="bg-dark">Music</option>
+                                        <option value="" class="bg-dark">Mystery</option>
+                                        <option value="" class="bg-dark">Romance</option>
+                                        <option value="" class="bg-dark">Science Fiction</option>
+                                        <option value="" class="bg-dark">TV Movie</option>
+                                        <option value="" class="bg-dark">Thriller</option>
+                                        <option value="" class="bg-dark">War</option>
+                                        <option value="" class="bg-dark">Western</option>
+                                    </select>
+                                </div>
                             </div>
-                            <div class="col-sm">
-                                <select id="genre" class="px-2" style="width: 100%" name="genre" id="">
-                                    <option value="" class="bg-dark">Без разницы</option>
-                                    <option value="" class="bg-dark">Action</option>
-                                    <option value="" class="bg-dark">Adventure</option>
-                                    <option value="" class="bg-dark">Animation</option>
-                                    <option value="" class="bg-dark">Crime</option>
-                                    <option value="" class="bg-dark">Documentary</option>
-                                    <option value="" class="bg-dark">Family</option>
-                                    <option value="" class="bg-dark">Fantasy</option>
-                                    <option value="" class="bg-dark">History</option>
-                                    <option value="" class="bg-dark">Horror</option>
-                                    <option value="" class="bg-dark">Music</option>
-                                    <option value="" class="bg-dark">Mystery</option>
-                                    <option value="" class="bg-dark">Romance</option>
-                                    <option value="" class="bg-dark">Science Fiction</option>
-                                    <option value="" class="bg-dark">TV Movie</option>
-                                    <option value="" class="bg-dark">Thriller</option>
-                                    <option value="" class="bg-dark">War</option>
-                                    <option value="" class="bg-dark">Western</option>
-                                </select>
+                            <div class="row pb-5">
+                                <div class="col-sm">
+                                    <label for="year">Год выпуска не раньше:</label>
+                                </div>
+                                <div class="col-sm">
+                                    <select id="year" class="px-2" style="width: 100%" name="year" id="">
+                                        <option value="" class="bg-dark">Без разницы</option>
+                                        <option value="" class="bg-dark">2020</option>
+                                        <option value="" class="bg-dark">2018</option>
+                                        <option value="" class="bg-dark">2015</option>
+                                        <option value="" class="bg-dark">2010</option>
+                                        <option value="" class="bg-dark">2000</option>
+                                        <option value="" class="bg-dark">1990</option>0</option>
+                                    </select>
+                                </div>
                             </div>
-                        </div>
-                        <div class="row pb-5">
-                            <div class="col-sm">
-                                <label for="year">Год выпуска не раньше:</label>
+                            <div class="row pb-5">
+                                <div class="col-sm">
+                                    <label for="duration">Длительность меньше (в мин):</label>
+                                </div>
+                                <div class="col-sm">
+                                    <select id="duration" class="px-2" style="width: 100%" name="duration" id="">
+                                        <option value="" class="bg-dark">Без разницы</option>
+                                        <option value="" class="bg-dark">90</option>
+                                        <option value="" class="bg-dark">105</option>
+                                        <option value="" class="bg-dark">120</option>
+                                        <option value="" class="bg-dark">150</option>
+                                        <option value="" class="bg-dark">180</option>
+                                        <option value="" class="bg-dark">200</option>
+                                    </select>
+                                </div>
                             </div>
-                            <div class="col-sm">
-                                <select id="year" class="px-2" style="width: 100%" name="year" id="">
-                                    <option value="" class="bg-dark">Без разницы</option>
-                                    <option value="" class="bg-dark">2020</option>
-                                    <option value="" class="bg-dark">2018</option>
-                                    <option value="" class="bg-dark">2015</option>
-                                    <option value="" class="bg-dark">2010</option>
-                                    <option value="" class="bg-dark">2000</option>
-                                    <option value="" class="bg-dark">1990</option>0</option>
-                                </select>
+                            <div class="row pb-5">
+                                <div class="col-sm">
+                                    <label for="country">Страна:</label>
+                                </div>
+                                <div class="col-sm">
+                                    <select id="country" class="px-2" style="width: 100%" name="country" id="">
+                                        <option value="" class="bg-dark">Без разницы</option>
+                                        <option value="" class="bg-dark">US</option>
+                                        <option value="" class="bg-dark">RU</option>
+                                        <option value="" class="bg-dark">CA</option>
+                                        <option value="" class="bg-dark">AU</option>
+                                        <option value="" class="bg-dark">FR</option>
+                                        <option value="" class="bg-dark">GE</option>
+                                    </select>
+                                </div>
                             </div>
-                        </div>
-                        <div class="row pb-5">
-                            <div class="col-sm">
-                                <label for="duration">Длительность меньше (в мин):</label>
+                            <div class="row pb-5">
+                                <div class="col-sm">
+                                    <label for="rating">Рейтинг больше:</label>
+                                </div>
+                                <div class="col-sm">
+                                    <select id="rating" class="px-2" style="width: 100%" name="rating" id="">
+                                        <option value="" class="bg-dark">Без разницы</option>
+                                        <option value="" class="bg-dark">9</option>
+                                        <option value="" class="bg-dark">8</option>
+                                        <option value="" class="bg-dark">7</option>
+                                        <option value="" class="bg-dark">6</option>
+                                        <option value="" class="bg-dark">5</option>
+                                        <option value="" class="bg-dark">4</option>
+                                        <option value="" class="bg-dark">3</option>
+                                    </select>
+                                </div>
                             </div>
-                            <div class="col-sm">
-                                <select id="duration" class="px-2" style="width: 100%" name="duration" id="">
-                                    <option value="" class="bg-dark">Без разницы</option>
-                                    <option value="" class="bg-dark">90</option>
-                                    <option value="" class="bg-dark">105</option>
-                                    <option value="" class="bg-dark">120</option>
-                                    <option value="" class="bg-dark">150</option>
-                                    <option value="" class="bg-dark">180</option>
-                                    <option value="" class="bg-dark">200</option>
-                                </select>
+                            <!-- <div class="row pb-5">
+                                <div class="col-sm">
+                                    <label for="advice">Слушаем  Зарю?</label>
+                                </div>
+                                <div class="col-sm">
+                                    <select id="advice" class="px-2" style="width: 100%" name="advice" id="">
+                                        <option value="" class="bg-dark">Без разницы</option>
+                                        <option value="" class="bg-dark">Нет</option>
+                                        <option value="" class="bg-dark">Да, конечно</option>
+                                    </select>
+                                </div>
+                            </div> -->
+                            <div class="text-center h5">
+                                <button id="searchBtn" type="submit" style="width: 250px;" class="btn mb-5  font-weight-bold btn-success text-dark text-capitalize  "><strong>ИСКАТЬ!</strong></button>
                             </div>
-                        </div>
-                        <div class="row pb-5">
-                            <div class="col-sm">
-                                <label for="country">Страна:</label>
-                            </div>
-                            <div class="col-sm">
-                                <select id="country" class="px-2" style="width: 100%" name="country" id="">
-                                    <option value="" class="bg-dark">Без разницы</option>
-                                    <option value="" class="bg-dark">US</option>
-                                    <option value="" class="bg-dark">RU</option>
-                                    <option value="" class="bg-dark">CA</option>
-                                    <option value="" class="bg-dark">AU</option>
-                                    <option value="" class="bg-dark">FR</option>
-                                    <option value="" class="bg-dark">GE</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="row pb-5">
-                            <div class="col-sm">
-                                <label for="rating">Рейтинг больше:</label>
-                            </div>
-                            <div class="col-sm">
-                                <select id="rating" class="px-2" style="width: 100%" name="rating" id="">
-                                    <option value="" class="bg-dark">Без разницы</option>
-                                    <option value="" class="bg-dark">9</option>
-                                    <option value="" class="bg-dark">8</option>
-                                    <option value="" class="bg-dark">7</option>
-                                    <option value="" class="bg-dark">6</option>
-                                    <option value="" class="bg-dark">5</option>
-                                    <option value="" class="bg-dark">4</option>
-                                    <option value="" class="bg-dark">3</option>
-                                </select>
-                            </div>
-                        </div>
-                        <!-- <div class="row pb-5">
-                            <div class="col-sm">
-                                <label for="advice">Слушаем  Зарю?</label>
-                            </div>
-                            <div class="col-sm">
-                                <select id="advice" class="px-2" style="width: 100%" name="advice" id="">
-                                    <option value="" class="bg-dark">Без разницы</option>
-                                    <option value="" class="bg-dark">Нет</option>
-                                    <option value="" class="bg-dark">Да, конечно</option>
-                                </select>
-                            </div>
-                        </div> -->
-                        <div class="text-center h5">
-                            <button id="searchBtn" type="submit" style="width: 250px;" class="btn mb-5  font-weight-bold btn-success text-dark text-capitalize  "><strong>ИСКАТЬ!</strong></button>
-                        </div>
-                    </form>
-                </div>
+                        </form>
+                    </div>  
+                </div>           
                 
-            </div>
+            <!-- </div> -->
         </div>
     </main>
     <div class="message hide">
         <div class="message__content row">              
             <p>Кажется, стоит поменять фильтры</p>
             <div class="text-center mt-2">
-                <button type="submit" style="width: 250px;" class="btn font-weight-bold btn-success text-dark text-capitalize  exitBtn"><strong>Поменять фильтры</strong></button>   
+                <button type="submit" style="width: 250px;" class="manyBtn btn font-weight-bold btn-success text-dark text-capitalize"><strong>Отстань</strong></button>   
+            </div>
+        </div>
+    </div>
+    <div class="many hide">
+        <div class="message__content row">              
+            <p>Кажется, вы уже добавили много фильмов</p>
+            <div class="text-center mt-2">
+                <button id="openFav" type="submit" style="width: 250px;" class="btn font-weight-bold btn-success text-dark text-capitalize "><strong>Просмотреть сохраненные</strong></button>   
             </div>
         </div>
     </div>
@@ -152,9 +162,6 @@
                     <div class="release-date my-sm-4 text-center" style="font-weight: bold;">
                         
                     </div>
-                    <!-- <p class="modal__link-wrapper">
-                        <a class="modal__link" href="https://google.com" target="_blanc">Оффициальная страница</a>
-                    </p> -->
                 </div>
             </div>
                 
@@ -163,16 +170,23 @@
                     
                     <h2 class="modal__title">
                         Название шоу
+                        
                     </h2>
 
                     <section class="genres">
-                        <h3>Жанр:</h3>
+                        <h3 class="genres__title"></h3>
                         <ul class="genres-list">
                             
                         </ul>
 
-                        <div class="zarya" title="Одобрено Зарей!">
-                            <img src="icons/like.png" alt="">
+                        <div class="panel">
+                            <!-- <div title="Добавить к себе"> -->
+                                <!-- <img src="icons/add.png" > -->
+                                <i id="addBtn" class="fa fa-heart fa-3x" alt="Добавить фильм к себе"></i>
+                            <!-- </div> -->
+                            <!-- <div class="zarya panel-button" title="Одобрено Зарей!">
+                                <img src="icons/like.png" alt="Фильм одобрен Зарей">
+                            </div> -->
                         </div>
                     </section>
                     
@@ -186,7 +200,7 @@
                     <section class="header__info">
     
     
-                        <h3 dir="auto">Обзор: </h3>
+                        <h3 class="review" dir="auto"></h3>
                         <div class="overview" dir="auto">
     
                             <p class="description"></p>
@@ -208,6 +222,17 @@
             
         </div>
     </div>
+    <div class="favourites">
+        <div class="fav-block">
+            <div class="fav-movies">
+                
+            </div>
+            <div class="favBtn">
+                <!-- <img src="icons/fav.png" alt="Избранное"> -->
+                <i class="fa fa-heart fa-2x" alt="Добавить фильм к себе"></i>
+            </div>
+        </div>
+    </div>
     <footer class="mt-5 border-top border-secondary border-bottom">
         <div class="container px-5 h-100">
             <div class="mx-auto h-100" style="max-width: 700px;">
@@ -224,12 +249,13 @@
                 </div>
                 <div class="row h-100 videoclub">
                     <div class="col-sm my-auto">
-                        <div>Вдохновлено <a href="https://open.spotify.com/artist/3rp4f58JlRHkk8hpdLCer1" target="_blank" class="link-light">Videoclub</a></div>
+                        <div>Написано под <a href="https://open.spotify.com/artist/3rp4f58JlRHkk8hpdLCer1" target="_blank" class="link-light">Videoclub</a></div>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
     <script src="main2.js"></script>
+    <script src="https://kit.fontawesome.com/a121bf75ec.js" crossorigin="anonymous"></script>
 </body>
 </html>

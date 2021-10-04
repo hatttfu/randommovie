@@ -1,3 +1,7 @@
+body {
+    overflow-x: hidden;
+}
+
 select {
     background: transparent;
 }
@@ -61,25 +65,6 @@ select, .option {
     position: relative;
 }
 
-/* .modal__description section {
-    margin-top: 15px;
-    overflow-x: hidden;
-} */
-
-/* .modal__link-wrapper {
-    padding-top: 15px;
-    color: #ff747f;
-}
-
-.modal__link {
-    font-size: 12px;
-    color: #ffc107;
-}
-
-.modal__link:hover {
-    color: #FF637F;
-} */
-
 .rate {
     font-weight: bold;
     font-size: 20px;
@@ -89,14 +74,14 @@ select, .option {
     display: none;
 }
 
-.message {
+.message, .many {
     position: fixed;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
     z-index: 1100;
     background-color: inherit;
-    
+    /* display: none; */
 }
 
 .message__content {
@@ -112,21 +97,149 @@ select, .option {
     transition: opacity 1s ease-in;
 }
 
-.zarya {
+.panel {
+    display: flex;
     position: absolute;
-    right: 0;
+    right: 1px;
     top: 0;
-    width: 40px;
-    height: 40px;
-    background-color: #ffc107;
+}
+
+.panel-button {
     text-align: center;
     line-height: 35px;
     border-radius: 5px;
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+    cursor: pointer;
 }
 
+#addBtn {
+    cursor: pointer;
+}
 
+#addBtn:hover, .btn:hover {
+    -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2) inset;
+    -moz-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2) inset;
+    box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2) inset;
+}
+
+.zarya {
+    background-color: #ffc107;
+}
 
 .videoclub {
     font-size: 12px;
 }
+
+.favourites {
+    position: absolute;
+    background: #212529;
+    top: 0;
+    right: -400px;
+    width: 440px;
+    min-height: 100vh;
+    border-left: 2px solid #dfe6e9;
+    z-index: 5000;
+    padding-left: 40px;
+    -webkit-transition: .5s right ease-in-out;
+    -o-transition: .5s right ease-in-out;
+    transition: .5s right ease-in-out;
+}
+
+.fav-active {
+    right: 0 !important;
+    padding-left: 0;
+    -webkit-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out
+}
+
+.black {
+    color: #000;
+}
+
+.favBtn {
+    position: absolute;
+    top: 0;
+    border-radius: 0;
+    left: 0;
+    margin: 0 3px;
+}
+
+.active {
+    left: 400px;
+}
+
+.fav-movies {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin-right: 40px;
+}
+
+.fav-movie {
+    margin-left: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #636e72;
+}
+
+.fav-title {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.fav-data {
+    font-size: 12px;
+}
+
+.fav-genres {
+    font-size: 14px;
+    font-style: italic;
+}
+
+.fav-poster, .fav-id {
+    float: right;  
+    margin-left: 5px;
+}
+
+.fav-poster img{
+    width: 120px !important;
+}
+
+.fav-review {
+    font-size: 13px;
+    margin: 10px 0;
+}
+
+.hide {
+    display: none;
+}
+
+.unclickable {
+    pointer-events: none !important;
+}
+
+.fav-id {
+    font-size: 10px;
+    font-style: italic;
+}
+
+#removeBtn {
+    height: 30px;
+    line-height: 30px;
+    padding: 0 5px;
+    background-color: #b2bec3;
+    border: 0;
+}
+
+.fa-heart:hover {
+    color: red;
+}
+
+.liked {
+    color: red;
+}
+
+
 
